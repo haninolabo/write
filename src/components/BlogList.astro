@@ -20,7 +20,7 @@ const dateFormatter = new Intl.DateTimeFormat('en', {
   <div class="blog-list">
     {
       posts.map((post) => (
-        <a class="blog-row" href={`/blog/${post.id}/`}>
+        <a class="blog-row" href={`/${post.id}/`}>
           <span class="blog-title-wrap">
             <AccentMark />
             <span class="blog-title">{post.data.title}</span>

@@ -1,7 +1,7 @@
 ---
 import { getCollection, render } from 'astro:content';
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import PostWindow from '../../components/PostWindow.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PostWindow from '../components/PostWindow.astro';
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog');
@@ -22,7 +22,7 @@ const { Content } = await render(post);
   pageKind="post"
 >
   <main class="site-page" aria-label={post.data.title}>
-    <PostWindow title={post.data.title}>
+    <PostWindow title={post.data.title} pubDate={post.data.pubDate}>
       <Content />
     </PostWindow>
   </main>
