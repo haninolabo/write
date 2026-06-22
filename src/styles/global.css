@@ -310,6 +310,11 @@ select {
 }
 
 @media (max-width: 720px) {
+  .site-logo {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
   .blog-list-window,
   .post-window {
     width: calc(100vw - 32px);
