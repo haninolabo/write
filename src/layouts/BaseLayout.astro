@@ -1,0 +1,36 @@
+---
+import SiteLogo from '../components/SiteLogo.astro';
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+  pageKind?: 'home' | 'post';
+}
+
+const {
+  title = 'write.hani',
+  description = 'A minimal blog by Hani.',
+  pageKind = 'home',
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500&family=Goudy+Bookletter+1911&display=swap"
+      rel="stylesheet"
+    />
+    <title>{title}</title>
+  </head>
+  <body class={pageKind === 'post' ? 'is-post-page' : ''}>
+    <SiteLogo />
+    <slot />
+  </body>
+</html>

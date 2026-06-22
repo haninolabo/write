@@ -1,0 +1,35 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import AccentMark from './AccentMark.astro';
+
+interface Props {
+  posts: CollectionEntry<'blog'>[];
+}
+
+const { posts } = Astro.props;
+
+const dateFormatter = new Intl.DateTimeFormat('en', {
+  month: 'short',
+  day: 'numeric',
+  year: 'numeric',
+  timeZone: 'UTC',
+});
+---
+
+<section class="blog-list-window scroll-window" aria-label="Blog posts">
+  <div class="blog-list">
+    {
+      posts.map((post) => (
+        <a class="blog-row" href={`/blog/${post.id}/`}>
+          <span class="blog-title-wrap">
+            <AccentMark />
+            <span class="blog-title">{post.data.title}</span>
+          </span>
+          <time class="blog-date" datetime={post.data.pubDate.toISOString()}>
+            {dateFormatter.format(post.data.pubDate)}
+          </time>
+        </a>
+      ))
+    }
+  </div>
+</section>

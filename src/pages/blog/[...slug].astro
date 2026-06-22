@@ -1,0 +1,29 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PostWindow from '../../components/PostWindow.astro';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+
+  return posts.map((post) => ({
+    params: { slug: post.id },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+---
+
+<BaseLayout
+  title={`${post.data.title} | write.hani`}
+  description={post.data.description}
+  pageKind="post"
+>
+  <main class="site-page" aria-label={post.data.title}>
+    <PostWindow title={post.data.title}>
+      <Content />
+    </PostWindow>
+  </main>
+</BaseLayout>
