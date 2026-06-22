@@ -341,6 +341,18 @@ select {
     font-size: 11px;
     line-height: 11px;
   }
+
+  .accent-mark {
+    top: -20px;
+    left: -20px;
+    width: 40.73px;
+    height: 40.73px;
+  }
+
+  .accent-mark::before {
+    width: 28.8px;
+    height: 28.8px;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
