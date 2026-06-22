@@ -5,7 +5,6 @@
   --glow-core: #9cf7c4;
   --glow-mid: #ccfbe0;
   --panel-width: 736px;
-  --panel-edge: 20px;
   --logo-x: 20px;
   --logo-y: 20px;
 }
@@ -106,7 +105,7 @@ select {
 
 .blog-list-window {
   height: min(36.7789svh, 306px);
-  padding: 12px var(--panel-edge);
+  padding: 20px;
 }
 
 .blog-list {
@@ -157,7 +156,7 @@ select {
   font-family: 'Epilogue', system-ui, sans-serif;
   font-size: 12px;
   line-height: 12px;
-  letter-spacing: -2px;
+  letter-spacing: 0px;
   white-space: nowrap;
 }
 
@@ -192,7 +191,7 @@ select {
 
 .post-window {
   height: min(67.0673svh, 558px);
-  padding: 12px var(--panel-edge);
+  padding: 20px;
   overflow: hidden;
 }
 
@@ -229,7 +228,7 @@ select {
   font-family: 'Epilogue', system-ui, sans-serif;
   font-size: 12px;
   line-height: 12px;
-  letter-spacing: -2px;
+  letter-spacing: 0px;
   white-space: nowrap;
 }
 
@@ -239,7 +238,7 @@ select {
   font-family: 'Epilogue', system-ui, sans-serif;
   font-size: 14px;
   line-height: 20px;
-  letter-spacing: -2px;
+  letter-spacing: 0px;
 }
 
 .post-body :where(h2, h3) {
@@ -289,7 +288,7 @@ select {
 .post-body p {
   font-size: 14px;
   line-height: 20px;
-  letter-spacing: -2px;
+  letter-spacing: 0px;
   word-break: break-word;
 }
 
@@ -308,10 +307,6 @@ select {
 }
 
 @media (max-width: 720px) {
-  :root {
-    --panel-edge: 18px;
-  }
-
   .blog-list-window,
   .post-window {
     width: calc(100vw - 32px);
