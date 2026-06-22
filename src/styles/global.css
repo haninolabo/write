@@ -192,7 +192,7 @@ select {
 .post-window {
   height: min(67.0673svh, 558px);
   padding: 20px;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .post-flow {
@@ -233,7 +233,10 @@ select {
 }
 
 .post-body {
+  width: calc(100% + 64px);
   min-height: 0;
+  margin: -32px -32px 0;
+  padding: 32px 32px 0;
   flex: 1;
   font-family: 'Epilogue', system-ui, sans-serif;
   font-size: 14px;
