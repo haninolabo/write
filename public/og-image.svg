@@ -10,7 +10,7 @@
     </filter>
   </defs>
   <rect width="1200" height="630" fill="#ffffff"/>
-  <circle cx="352" cy="279" r="57" fill="url(#mark)" filter="url(#soften)"/>
-  <text x="400" y="300" fill="#afaab0" font-family="Georgia, serif" font-size="86" font-weight="400">write.hani</text>
-  <text x="404" y="358" fill="#afaab0" font-family="Arial, sans-serif" font-size="26" font-weight="400">weekly learning progress &amp; monologues</text>
+  <circle cx="308" cy="284" r="74" fill="url(#mark)" filter="url(#soften)"/>
+  <text x="372" y="316" fill="#afaab0" font-family="Georgia, serif" font-size="112" font-weight="400">write.hani</text>
+  <text x="377" y="392" fill="#afaab0" font-family="Arial, sans-serif" font-size="34" font-weight="400">weekly learning progress &amp; monologues</text>
 </svg>
