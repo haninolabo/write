@@ -319,8 +319,20 @@ select {
     height: min(46svh, 306px);
   }
 
+  .blog-list {
+    gap: 24px;
+  }
+
   .blog-row {
     gap: 14px;
+    min-height: 44px;
+  }
+
+  .blog-title {
+    display: -webkit-box;
+    white-space: normal;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
   }
 }
 
